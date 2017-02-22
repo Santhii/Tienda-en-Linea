@@ -15,6 +15,7 @@ public class Comprador {
     public String usuario;
     public String correro;
     public String numTarjeta;
+    public String contraseña;
 
     public String getNombre() {
         return nombre;
@@ -55,11 +56,21 @@ public class Comprador {
     public void setNumTarjeta(String numTarjeta) {
         this.numTarjeta = numTarjeta;
     }
-    public Comprador(String nombre, String apellido, String usuario, String correo, String numTarjeta ){
+
+    public String getContraseña() {
+        return contraseña;
+    }
+
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
+    }
+    
+    public Comprador(String nombre, String apellido, String usuario, String correo, String numTarjeta, String contraseña){
         this.nombre=nombre;
         this.apellido=apellido;
         this.usuario=usuario;
         this.correro=correo;
         this.numTarjeta=numTarjeta;
+        this.contraseña=contraseña;
     }
 }

@@ -5,6 +5,8 @@
  */
 package Interfaz;
 
+import tienda.Comprador;
+
 /**
  *
  * @author Admini
@@ -27,35 +29,40 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jToggleButton1 = new javax.swing.JToggleButton();
-        jToggleButton2 = new javax.swing.JToggleButton();
-        jButton1 = new javax.swing.JButton();
+        Registrarse = new javax.swing.JToggleButton();
+        iniciarsesion = new javax.swing.JToggleButton();
+        verpeliculas = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jToggleButton1.setText("Registrarse ");
-        getContentPane().add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, -1, 30));
-
-        jToggleButton2.setText("Iniciar sesión");
-        jToggleButton2.setToolTipText("");
-        jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
+        Registrarse.setText("Registrarse ");
+        Registrarse.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton2ActionPerformed(evt);
+                RegistrarseActionPerformed(evt);
             }
         });
-        getContentPane().add(jToggleButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 50, 120, 30));
+        getContentPane().add(Registrarse, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, -1, 30));
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jButton1.setText("Ver Películas");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        iniciarsesion.setText("Iniciar sesión");
+        iniciarsesion.setToolTipText("");
+        iniciarsesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                iniciarsesionActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, 110, 30));
+        getContentPane().add(iniciarsesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 50, 120, 30));
+
+        verpeliculas.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        verpeliculas.setText("Ver Películas");
+        verpeliculas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                verpeliculasActionPerformed(evt);
+            }
+        });
+        getContentPane().add(verpeliculas, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, 110, 30));
 
         jLabel2.setFont(new java.awt.Font("Lucida Calligraphy", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -67,14 +74,33 @@ public class Principal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+     
+    private void verpeliculasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verpeliculasActionPerformed
+         Principal u = new Principal();
+        u.setVisible(false);
+        dispose();
+        AñadirCompra i = new AñadirCompra();//(this, rootPaneCheckingEnabled);
+        i.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_verpeliculasActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void iniciarsesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarsesionActionPerformed
+        Principal u = new Principal();
+        u.setVisible(false);
+        dispose();
+        Ingreso s = new Ingreso();//(this, rootPaneCheckingEnabled);
+        s.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_iniciarsesionActionPerformed
 
-    private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton2ActionPerformed
+    private void RegistrarseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarseActionPerformed
+        Principal u = new Principal();
+        u.setVisible(false);
+        dispose();
+        Registrarse r = new Registrarse();//(this, rootPaneCheckingEnabled);
+        r.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_RegistrarseActionPerformed
 
     /**
      * @param args the command line arguments
@@ -112,10 +138,10 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JToggleButton Registrarse;
+    private javax.swing.JToggleButton iniciarsesion;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JToggleButton jToggleButton1;
-    private javax.swing.JToggleButton jToggleButton2;
+    private javax.swing.JButton verpeliculas;
     // End of variables declaration//GEN-END:variables
 }
